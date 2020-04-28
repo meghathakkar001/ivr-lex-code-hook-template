@@ -1,0 +1,28 @@
+{
+  "name": "ivr-lex-code-hook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "directedDialogIntent.js",
+  "directories": {
+    "test": "test"
+  },
+  "bundledDependencies": [
+    "pino"
+  ],
+  "dependencies": {
+    "pino": "^6.2.1"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.2",
+    "npm-pack-zip": "^1.2.7",
+    "nyc": "^15.0.1"
+  },
+  "scripts": {
+    "test": "mocha",
+    "coverage": "nyc npm run test",
+    "pack": "npm-pack-zip",
+    "publish": "npm-pack-zip && aws lambda update-function-code --function-name %npm_package_name% --zip-file fileb://%npm_package_name%.zip && rm %npm_package_name%.zip"
+  },
+  "author": "",
+  "license": "ISC"
+}
