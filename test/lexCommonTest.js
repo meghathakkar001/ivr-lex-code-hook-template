@@ -7,11 +7,11 @@ describe('Lex Common Test suite', function () {
         // runs once before the first test in this block
         delete require.cache[require.resolve('../lexCommon.js')]  
         common = require('../lexCommon.js');     
-        common.errorPrompts.getNoMatchMessage= function(errorCount){
-            return { contentType: 'PlainText', content: "test no match "+errorCount };
+        common.errorPrompts.getNoMatchMessage= function(sessionAttributes){
+            return { contentType: 'PlainText', content: "test no match 0"};
         }
-        common.errorPrompts.getNoInputMessage= function(errorCount){
-            return { contentType: 'PlainText', content: "test no input "+errorCount };
+        common.errorPrompts.getNoInputMessage= function(sessionAttributes){
+            return { contentType: 'PlainText', content: "test no input 0"};
         }
       });
 

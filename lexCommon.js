@@ -56,12 +56,12 @@ errorManager = function (event) {
         sessionAttributes.allErrorCount++;
         if (inputTranscript == null || inputTranscript === '') {
             sessionAttributes.noInputCount++;
-            let message = errorPrompts.getNoInputMessage(sessionAttributes.allErrorCount - 1);
+            let message = errorPrompts.getNoInputMessage(sessionAttributes);
             return responseBuilder.withType('ElicitIntent').withMessage(message).withSessionAttributes(sessionAttributes).build();
         }
         /* Now it has to be no match */
         sessionAttributes.noMatchCount++;
-        let message = errorPrompts.getNoMatchMessage(sessionAttributes.allErrorCount - 1);
+        let message = errorPrompts.getNoMatchMessage(sessionAttributes);
         return responseBuilder.withType('ElicitIntent').withMessage(message).withSessionAttributes(sessionAttributes).build();
 
     }
