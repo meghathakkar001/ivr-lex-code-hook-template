@@ -1,10 +1,10 @@
 let noMatchPrompts = [
-    { contentType: 'PlainText', content: "Sorry, could you please repeat that?" },
-    { contentType: 'PlainText', content: "Sorry, could you please repeat that?" },
+    { contentType: 'PlainText', content: "Sorry, which town or city do you want to hear the weather for?" },
+    { contentType: 'PlainText', content: "Please say the name of the town or city that you would like to hear the weather forecast for." },
 ];
 let noInputPrompts = [
-    { contentType: 'PlainText', content: "Sorry, could you please repeat that?" },
-    { contentType: 'PlainText', content: "Sorry, could you please repeat that?" },
+    { contentType: 'PlainText', content: "Please say the name of the town or city that you would like to hear the weather forecast for." },
+    { contentType: 'PlainText', content: "Please say the name of the town or city that you would like to hear the weather forecast for." },
 ];
 
 exports.getNoInputMessage = function (sessionAttributes) {
